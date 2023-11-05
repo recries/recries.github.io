@@ -244,7 +244,7 @@ sup {
 
 a {
   color: #addd91;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: #00ff00;
@@ -11460,6 +11460,18 @@ section.resume-section .resume-section-content {
   display: flex;
   justify-content: space-between;
 }
+.project{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.project p{ 
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.project a{
+  font-size: 24px;
+  margin-bottom: 0;
+}
 .comment_area{
   background-color: var(--bs-gray-100);
   padding: 15px;
@@ -11485,6 +11497,9 @@ section.resume-section .resume-section-content {
 }
 .career_area span{
   display: block;
+}
+.comment{
+  font-weight: 600;
 }
 .career_area .text_area{
   width: 45%;
