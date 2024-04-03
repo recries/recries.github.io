@@ -11482,7 +11482,7 @@ section.resume-section .resume-section-content {
   font-size: 18px;
 }
 .career_area{
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   display: flex;
   gap: 20px;
   justify-content: space-between;
@@ -11520,6 +11520,7 @@ section.resume-section .resume-section-content {
 .mini_img img{
   cursor: pointer;
   max-width: 100%;
+
 }
 .mini_img span{
   font-size: 10px;
