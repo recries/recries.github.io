@@ -5483,28 +5483,38 @@ textarea.form-control-lg {
 }
 
 .modal {
+  display: none; /* 기본적으로 모달을 숨깁니다 */
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1055;
-  display: none;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* 배경색을 반투명으로 설정 */
   outline: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .modal-dialog {
   position: relative;
-  width: auto;
+  width: 80%; /* 너비를 80%로 설정 */
+  max-width: 800px; /* 최대 너비 설정 */
   margin: 0.5rem;
   pointer-events: none;
 }
-.modal.fade .modal-dialog {
-  transition: transform 0.3s ease-out;
-  transform: translate(0, -50px);
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  max-width: 80%; /* 이미지 최대 너비를 80%로 설정 */
+  margin: auto; /* 이미지를 중앙에 배치 */
+  display: block;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     transition: none;
@@ -11523,6 +11533,26 @@ section.resume-section .resume-section-content {
 
 }
 .mini_img span{
+  font-size: 10px;
+  font-weight: bold;
+  background-color: var(--bs-gray-100);
+  border-radius: 2px;
+  color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+  position: absolute;
+}
+
+.expand_img{
+  max-width: 50%;
+  border-radius: 5px;
+  background-color: var(--bs-gray-100);
+  height: 100%;
+}
+.expand_img img{
+  cursor: pointer;
+  max-width: 100%;
+
+}
+.expand_img span{
   font-size: 10px;
   font-weight: bold;
   background-color: var(--bs-gray-100);

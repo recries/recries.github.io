@@ -30,5 +30,15 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
+    const swiper = new Swiper('.swiper', {
+        speed: 400,
+        spaceBetween: 2,
+        centerSlides : true
+    });
+    $('.expand_img').on('click', function(){
+        $('.swiper').css('display','block');
+    })
+    $('.swiper').on('click', function (){
+        $(this).css('display', 'none');
+    })
 });
