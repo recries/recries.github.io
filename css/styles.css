@@ -11513,6 +11513,9 @@ section.resume-section .resume-section-content {
 .career_area .text_area{
   width: 45%;
 }
+.career_area .only_text{
+  width: 85%;
+}
 .career_area img{
   max-width: 50%;
   border-radius: 5px;
