@@ -11507,6 +11507,9 @@ section.resume-section .resume-section-content {
 .career_area span{
   display: block;
 }
+.career_area small{
+  float: right;
+}
 .comment{
   font-weight: 600;
 }
