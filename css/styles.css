@@ -11495,7 +11495,6 @@ section.resume-section .resume-section-content {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  max-height: 200px;
   overflow: hidden;
   padding: 0 10px;
 }
