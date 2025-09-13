@@ -11485,6 +11485,7 @@ section.resume-section .resume-section-content {
   background-color: var(--bs-gray-100);
   padding: 15px;
   border-radius: 15px;
+  white-space: pre-line;
 }
 .comment_area span{
   font-weight: bold;
@@ -11592,4 +11593,8 @@ section.resume-section .resume-section-content {
   font-weight: bold;
   font-size: 14px;
   margin-right: 15px;
+}
+.supportList strong {
+  position: relative;
+  cursor: pointer;
 }
