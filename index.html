@@ -31,6 +31,7 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/theme.css" rel="stylesheet" />
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -81,13 +82,18 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
           </li>
+          <li class="nav-item" id="theme-toggler-item">
+            <a class="nav-link" href="javascript:void(0);" id="theme-toggler">
+              <i class="fas fa-moon"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <!-- Page Content-->
     <div class="container-fluid p-0">
       <!-- About-->
-      <section class="resume-section" id="about">
+      <section class="resume-section scroll-fade-in" id="about">
         <div class="resume-section-content">
           <h1 class="mb-0">
             <span class="text-primary">김덕훈</span>
@@ -128,7 +134,7 @@
       </section>
       <hr class="m-0" />
       <!-- Experience-->
-      <section class="resume-section" id="experience">
+      <section class="resume-section scroll-fade-in" id="experience">
         <div class="resume-section-content">
           <h2 class="mb-5">Experience</h2>
           <div
@@ -193,7 +199,7 @@
       </section>
       <hr class="m-0" />
       <!-- career-->
-      <section class="resume-section" id="career">
+      <section class="resume-section scroll-fade-in" id="career">
         <div class="resume-section-content">
           <h2 class="mb-5">Career </h2>
           <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -346,6 +352,8 @@
             </div>  
           </div>
 
+          <hr class="my-5" />
+
           <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
               <div class="career_header">
@@ -443,7 +451,7 @@
 
       <hr class="m-0" />
       <!-- Skills-->
-      <section class="resume-section" id="skills">
+      <section class="resume-section scroll-fade-in" id="skills">
         <div class="resume-section-content">
           <h2 class="mb-5">Skills</h2>
           <div class="subheading mb-3">Programming Languages & Tools</div>
@@ -529,7 +537,7 @@
       </section>
       <hr class="m-0" />
       <!-- Education-->
-      <section class="resume-section" id="Education">
+      <section class="resume-section scroll-fade-in" id="Education">
         <div class="resume-section-content">
           <h2 class="mb-5">Education</h2>
           <p>
@@ -541,7 +549,7 @@
       </section>
       <hr class="m-0" />
       <!-- Awards-->
-      <section class="resume-section" id="awards">
+      <section class="resume-section scroll-fade-in" id="awards">
         <div class="resume-section-content">
           <h2 class="mb-5">Awards</h2>
           <ul class="fa-ul mb-0">
@@ -560,5 +568,6 @@
     <script src="js/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="js/jquery.js"></script>
+    <a href="#page-top" id="back-to-top" class="back-to-top-button js-scroll-trigger"><i class="fas fa-arrow-up"></i></a>
   </body>
 </html>

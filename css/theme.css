@@ -1,0 +1,203 @@
+/* Dark Mode Theme */
+:root {
+  --theme-bg: #fff;
+  --theme-text-color: #212529;
+  --theme-heading-color: #343a40;
+  --theme-primary-color: #addd91; /* User's original green */
+  --theme-primary-darker-text: #5c743a; /* Darker green for text on light bg */
+  --theme-secondary-text-color: #6c757d;
+  --theme-nav-bg: var(--theme-primary-color);
+  --theme-nav-text-color: #212529; /* Dark text on light green nav */
+  --theme-nav-text-hover-color: #000000;
+  --theme-link-color: #addd91;
+  --theme-link-hover-color: #00ff00;
+  --theme-social-icon-bg: #495057;
+  --theme-social-icon-hover-bg: var(--theme-primary-color);
+  --theme-dev-icon-color: #6c757d;
+  --theme-dev-icon-hover-color: #212529;
+  --theme-hr-color: #dee2e6;
+  --theme-subheading-color: #6c757d;
+}
+
+body[data-theme='dark'] {
+  --theme-bg: #212529;
+  --theme-text-color: #f8f9fa;
+  --theme-heading-color: #fff;
+  --theme-secondary-text-color: #adb5bd;
+  --theme-nav-bg: #1a1a1a;
+  --theme-link-color: #90ee90; /* Lighter green for dark bg */
+  --theme-link-hover-color: #32cd32;
+  --theme-social-icon-bg: #6c757d;
+  --theme-dev-icon-color: #adb5bd;
+  --theme-dev-icon-hover-color: #fff;
+  --theme-hr-color: #495057;
+  --theme-subheading-color: #adb5bd;
+  --theme-nav-text-color: rgba(255, 255, 255, 0.55); /* Restore light text for dark nav */
+  --theme-nav-text-hover-color: #fff;
+}
+
+/* Apply Theme */
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#sideNav {
+  background-color: var(--theme-nav-bg) !important;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  color: var(--theme-nav-text-color);
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: var(--theme-nav-text-hover-color);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: var(--theme-heading-color);
+}
+
+.text-primary {
+  color: var(--theme-primary-darker-text) !important; /* Darker green for readability */
+}
+
+body[data-theme='dark'] .text-primary {
+    color: var(--theme-primary-color) !important; /* Original light green on dark bg */
+}
+
+
+.subheading {
+    color: var(--theme-subheading-color);
+}
+
+.lead, .comment_area, .career_area .text_area span, .only_text div span, .supportList span small {
+    color: var(--theme-secondary-text-color) !important;
+}
+
+body[data-theme='dark'] p, 
+body[data-theme='dark'] li, 
+body[data-theme='dark'] span, 
+body[data-theme='dark'] div,
+body[data-theme='dark'] .subheading,
+body[data-theme='dark'] .only_text p,
+body[data-theme='dark'] .only_text div span,
+body[data-theme='dark'] .supportList span strong {
+    color: var(--theme-text-color) !important;
+}
+
+a {
+  color: var(--theme-nav-text-color);
+}
+
+a:hover {
+  color: var(--theme-link-hover-color);
+}
+
+hr.m-0 {
+    border-color: var(--theme-hr-color) !important;
+    opacity: 0.5;
+}
+
+.social-icons .social-icon {
+  background-color: var(--theme-social-icon-bg);
+  color: white; /* icon color */
+}
+
+.social-icons .social-icon:hover {
+  background-color: var(--theme-social-icon-hover-bg);
+}
+
+.dev-icons .list-inline-item i {
+  color: var(--theme-dev-icon-color);
+}
+
+.dev-icons .list-inline-item i:hover {
+  color: var(--theme-dev-icon-hover-color);
+}
+
+/* Specific overrides for dark mode */
+body[data-theme='dark'] .bg-primary {
+    background-color: var(--theme-nav-bg) !important;
+}
+
+body[data-theme='dark'] .social-icons .social-icon {
+    background-color: var(--theme-social-icon-bg);
+}
+
+/* Ensure moon/sun icon is visible */
+#theme-toggler i {
+    color: var(--theme-nav-text-color);
+    transition: color 0.3s;
+}
+#theme-toggler:hover i {
+    color: var(--theme-nav-text-hover-color);
+}
+
+body[data-theme='dark'] .comment_area {
+    background-color: transparent !important;
+}
+
+/* Scroll Animation */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Back to Top Button */
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--theme-primary-color);
+    line-height: 50px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+}
+
+.back-to-top-button.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top-button:hover {
+    background-color: var(--theme-primary-darker-text); /* Use the darker green on hover */
+}
+
+/* Adjust icon color on light primary color */
+.back-to-top-button i {
+    color: var(--theme-nav-text-color);
+}
+.back-to-top-button:hover i {
+    color: #fff;
+}
+
+/* Dark mode adjustments */
+body[data-theme='dark'] .back-to-top-button {
+    background-color: var(--theme-primary-darker-text);
+}
+body[data-theme='dark'] .back-to-top-button i {
+    color: #fff;
+}
+body[data-theme='dark'] .back-to-top-button:hover {
+    background-color: var(--theme-primary-color);
+}
+
+body[data-theme='dark'] .back-to-top-button:hover i {
+    color: #212529; /* Dark Gray */
+}
