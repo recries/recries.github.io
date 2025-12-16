@@ -1,13 +1,13 @@
-/* Dark Mode Theme */
+
 :root {
   --theme-bg: #fff;
   --theme-text-color: #212529;
   --theme-heading-color: #343a40;
-  --theme-primary-color: #addd91; /* User's original green */
-  --theme-primary-darker-text: #5c743a; /* Darker green for text on light bg */
+  --theme-primary-color: #addd91; 
+  --theme-primary-darker-text: #5c743a; 
   --theme-secondary-text-color: #6c757d;
   --theme-nav-bg: var(--theme-primary-color);
-  --theme-nav-text-color: #212529; /* Dark text on light green nav */
+  --theme-nav-text-color: #212529; 
   --theme-nav-text-hover-color: #000000;
   --theme-link-color: #addd91;
   --theme-link-hover-color: #00ff00;
@@ -25,18 +25,18 @@ body[data-theme='dark'] {
   --theme-heading-color: #fff;
   --theme-secondary-text-color: #adb5bd;
   --theme-nav-bg: #1a1a1a;
-  --theme-link-color: #90ee90; /* Lighter green for dark bg */
+  --theme-link-color: #90ee90; 
   --theme-link-hover-color: #32cd32;
   --theme-social-icon-bg: #6c757d;
   --theme-dev-icon-color: #adb5bd;
   --theme-dev-icon-hover-color: #fff;
   --theme-hr-color: #495057;
   --theme-subheading-color: #adb5bd;
-  --theme-nav-text-color: rgba(255, 255, 255, 0.55); /* Restore light text for dark nav */
+  --theme-nav-text-color: rgba(255, 255, 255, 0.55); 
   --theme-nav-text-hover-color: #fff;
 }
 
-/* Apply Theme */
+
 body {
   background-color: var(--theme-bg);
   color: var(--theme-text-color);
@@ -61,11 +61,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .text-primary {
-  color: var(--theme-primary-darker-text) !important; /* Darker green for readability */
+  color: var(--theme-primary-darker-text) !important; 
 }
 
 body[data-theme='dark'] .text-primary {
-    color: var(--theme-primary-color) !important; /* Original light green on dark bg */
+    color: var(--theme-primary-color) !important; 
 }
 
 
@@ -103,7 +103,7 @@ hr.m-0 {
 
 .social-icons .social-icon {
   background-color: var(--theme-social-icon-bg);
-  color: white; /* icon color */
+  color: white; 
 }
 
 .social-icons .social-icon:hover {
@@ -118,7 +118,7 @@ hr.m-0 {
   color: var(--theme-dev-icon-hover-color);
 }
 
-/* Specific overrides for dark mode */
+
 body[data-theme='dark'] .bg-primary {
     background-color: var(--theme-nav-bg) !important;
 }
@@ -127,7 +127,7 @@ body[data-theme='dark'] .social-icons .social-icon {
     background-color: var(--theme-social-icon-bg);
 }
 
-/* Ensure moon/sun icon is visible */
+
 #theme-toggler i {
     color: var(--theme-nav-text-color);
     transition: color 0.3s;
@@ -140,7 +140,10 @@ body[data-theme='dark'] .comment_area {
     background-color: transparent !important;
 }
 
-/* Scroll Animation */
+body[data-theme='dark'] .slide-content {
+    background-color: transparent !important;
+}
+
 .scroll-fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -152,7 +155,7 @@ body[data-theme='dark'] .comment_area {
     transform: translateY(0);
 }
 
-/* Back to Top Button */
+
 .back-to-top-button {
     position: fixed;
     bottom: 20px;
@@ -176,10 +179,10 @@ body[data-theme='dark'] .comment_area {
 }
 
 .back-to-top-button:hover {
-    background-color: var(--theme-primary-darker-text); /* Use the darker green on hover */
+    background-color: var(--theme-primary-darker-text); 
 }
 
-/* Adjust icon color on light primary color */
+
 .back-to-top-button i {
     color: var(--theme-nav-text-color);
 }
@@ -187,7 +190,7 @@ body[data-theme='dark'] .comment_area {
     color: #fff;
 }
 
-/* Dark mode adjustments */
+
 body[data-theme='dark'] .back-to-top-button {
     background-color: var(--theme-primary-darker-text);
 }
@@ -199,5 +202,5 @@ body[data-theme='dark'] .back-to-top-button:hover {
 }
 
 body[data-theme='dark'] .back-to-top-button:hover i {
-    color: #212529; /* Dark Gray */
+    color: #212529; 
 }
