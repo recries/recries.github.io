@@ -57,4 +57,84 @@ $('.supportList strong').hover(function() {
         $smallTag.text($smallTag.data('original-text'));
     }
 });
-  
+
+$(function() {
+    $('.btn-filter').on('click', function() {
+        var filterValue = $(this).attr('data-filter');
+
+        // Button active state
+        $('.btn-filter').removeClass('active');
+        $(this).addClass('active');
+
+        if (filterValue === 'all') {
+            $('.career_area').show();
+            $('.project').show(); 
+        } else {
+            $('.career_area').hide();
+            $('.project').hide();
+
+            $('.career_area').each(function() {
+                var techStack = $(this).find('.comment').text().toLowerCase();
+                var match = false;
+                
+                if (filterValue === 'DB') {
+                     if (techStack.includes('mariadb') || 
+                         techStack.includes('mysql') || 
+                         techStack.includes('oracle') || 
+                         techStack.includes('postgresql') || 
+                         techStack.includes('db2') || 
+                         techStack.includes('redis') || 
+                         techStack.includes('tibero')) {
+                         match = true;
+                     }
+                } else {
+                    if (techStack.includes(filterValue.toLowerCase())) {
+                        match = true;
+                    }
+                }
+                
+                if (match) {
+                    $(this).show();
+                }
+            });
+        }
+    });
+});
+
+/* 타이핑 이펙트 */
+$(function() {
+    var textList = [
+        "사용자 중심의 관점으로 문제를 해결하는 개발자",
+        "팀원들과의 협력을 통해 가치를 만드는 개발자",
+        "끊임없이 배우고 성장하는 개발자 김덕훈입니다."
+    ];
+    var textIndex = 0;
+    var charIndex = 0;
+    var isDeleting = false;
+    var speed = 100;
+
+    function type() {
+        var currentText = textList[textIndex];
+        var displayText = isDeleting 
+            ? currentText.substring(0, charIndex--) 
+            : currentText.substring(0, charIndex++);
+
+        $('#typing-text').text(displayText);
+
+        if (!isDeleting && charIndex > currentText.length) {
+            isDeleting = true;
+            speed = 2000; // Wait before deleting
+        } else if (isDeleting && charIndex < 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % textList.length;
+            charIndex = 0;
+            speed = 500;
+        } else {
+            speed = isDeleting ? 50 : 100;
+        }
+
+        setTimeout(type, speed);
+    }
+
+    type();
+});
