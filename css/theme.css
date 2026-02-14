@@ -1,6 +1,6 @@
 
 :root {
-  --theme-bg: #fff;
+  --theme-bg: #fffef0;
   --theme-text-color: #212529;
   --theme-heading-color: #343a40;
   --theme-primary-color: #addd91; 
@@ -142,6 +142,37 @@ body[data-theme='dark'] .comment_area {
 
 body[data-theme='dark'] .slide-content {
     background-color: transparent !important;
+}
+
+/* Skill Badges */
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: var(--theme-primary-color);
+    color: var(--theme-primary-darker-text);
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+body[data-theme='dark'] .skill-badge {
+    background-color: #3d4a2d; /* Darker green for dark mode */
+    color: var(--theme-primary-color);
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .scroll-fade-in {
