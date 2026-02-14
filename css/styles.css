@@ -11598,3 +11598,42 @@ section.resume-section .resume-section-content {
   position: relative;
   cursor: pointer;
 }
+/* Filter Buttons */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-filter {
+  background-color: transparent;
+  border: 2px solid var(--bs-primary);
+  color: var(--bs-primary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+
+/* Typing Animation */
+.typing-cursor {
+    font-weight: bold;
+    color: var(--bs-primary);
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
