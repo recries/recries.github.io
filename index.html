@@ -396,18 +396,19 @@
                     <span><strong>KBank</strong><small> 스케줄러를 통한 EAI 연계 데이터 수집 및 업데이트, 스크립트 업데이트</small></span>
                     <span><strong>웰컴저축은행</strong><small> OS 업데이트 대응, META 버전 확인 및 재기동</small></span>
                     <span><strong>IBK캐피탈</strong><small> 테이블 스페이스 용량 추적 및 처리, JSP 로드 수정</small></span>
-                    <span><strong>IM캐피탈</strong><small> 이상 데이터 정리, 소스 디컴파일 업데이트</small></span>
-                    <span><strong>KB캐피탈</strong><small> 암호화 관련 데이터 적용, 미들웨어 버전 업데이트</small></span>
+                    <span><strong>IM캐피탈</strong><small> 이상 데이터 정리, 소스 디컴파일 업데이트, 메모리 오버(GC오류)시점 확인을 통해 연계 솔루션 컨텍</small></span>
+                    <span><strong>KB캐피탈</strong><small> 암호화 관련 데이터 적용, 미들웨어 버전 업데이트, 보안취약점 조치(디컴파일을 통한 소스 복구 및 처리)</small></span>
                     <span><strong>JB우리캐피탈</strong><small> 로그 분석 기반 이상 데이터 추적 및 안내</small></span>
-                    <span><strong>KDB산은캐피탈</strong><small> DDL스크립트 출력 이상 수정, GAP분석 수정, 연계데이터 조회 수정</small></span>
+                    <span><strong>KDB산은캐피탈</strong><small> DDL스크립트 출력 이상 수정, GAP분석 수정, 연계데이터 조회 수정, Ldap SSO 적용</small></span>
                     <span><strong>한국주택공사</strong><small> 서버 상태 점검, 컬럼 값 정정, 프로파일 시스템 정리</small></span>
                     <span><strong>애큐온캐피탈</strong><small> 테이블 스페이스 용량 추적 및 처리</small></span>
                     <span><strong>법무부</strong><small> XSS 조치, 보안 취약점 대응, 중복 로그인 방지, 쿼리 검증 강화</small></span>
                     <span><strong>부산시청</strong><small> 시스템 오버플로우 대응, 스케줄러 수정</small></span>
                     <span><strong>정보자원관리시스템</strong><small> SQL 진단 스크립트 타임아웃 문제 수정(자바 라이브러리 확인을 통한 타임아웃 기간 확인)</small></span>
-                    <span><strong>건설근로자공제회</strong><small> 로그인 환경 개선, DDL 스크립트 이식,</small></span>
-                    <span><strong>한국신용정보보증원</strong><small> Tibero7 덤프를 활용한 데이터 이전, ERWIN 연계 작업, AD연계 정보 수정</small></span>
+                    <span><strong>건설근로자공제회</strong><small> 로그인 환경 개선, DDL 스크립트 이식</small></span>
+                    <span><strong>한국신용정보보증원</strong><small> 데이터 이전 지원, ERWIN 연계 작업, Ldap -> Ldaps 수정, 파티션 테이블 DDL Script 수정</small></span>
                     <span><strong>교통안전공단</strong><small> 파티션 설정 오류 수정, META 서버 이전 지원</small></span>
+                    <span><strong>한국교육학술정보원</strong><small> DB2오류 수정, 프로파일 오류 수정</small></span>
                     <span><strong>롯데칠성</strong><small>IAM 계정 연계 시스템 점검, 인터페이스 정의, 데이터 덤프</small></span>
                   </div>
                   <span class="comment">[지원팀으로 부서이동 후 선임 업무 인수인계]</span>
@@ -482,10 +483,12 @@
             - Map 구조의 작업 속도 위주 프로그래밍
             - DTO 구조의 유지보수성 위주 프로그래밍
             - MVC 패턴
-            - filter 및 interceptor
+            - filter 및 interceptor 관리
+            - 추상 클래스 활용
+            - Quartz Scheduler 적용 및 활용
 
             DB
-            - Mysql, Oracle, MariaDB, PostgreSQL, DB2, Redis 작성 가능
+            - Mysql, Oracle, PostgreSQL, DB2, Redis 작성 가능
             - DB 제약 구조 적용
             - 쿼리 작성 능력
             - 실행계획을 통한 쿼리 튜닝
@@ -497,6 +500,8 @@
             - DB CATALOG
             - MERGE INTO을 통한 데이터 마이그레이션 수정
             - WINDOW 함수를 통한 조회 비용 감소 및 데이터 마이그레이션시 사용법 숙달
+            - 그랜트, 시노님 등 EAI 연계를 위한 사용자 데이터 사용 관리
+            - VIEW 생성 및 수정
 
             CSS
             - 기본 문법 숙지
@@ -504,9 +509,6 @@
 
             Linux
             - 기본 문법 숙지
-            - Ubuntu
-            - Putty
-            - FileZilla
             - war 파일 배포
             - Tomcat, Nginx등 구축 및 실행
             - sh 스크립트 작성
@@ -517,7 +519,7 @@
             개발 환경
             [Java 17, SpringBoot 3.2, Gradle 8.5, Mybatis 3.0.3, MariaDB]
             자기 개발을 위한 사이트 작업중입니다.
-            가비아 PPK키를 통한 putty 접속으로 서버 작업중
+            월별 고정, 변동 지출 내역 관리를 위한 캘린더 웹
             <br>
           <span>자기 개발 - 광고제거 확장 프로그램 개시(현재 비공개, SandAdClear)- </span>
             개발환경
