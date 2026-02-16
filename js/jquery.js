@@ -138,3 +138,24 @@ $(function() {
 
     type();
 });
+
+function openNewTab(param) {
+        if(param == 'calendar'){
+            window.open('http://114.108.153.110:8080/login', '_blank');
+        } else if(param == 'roomFilter'){
+            window.open('https://chromewebstore.google.com/detail/khingmdeanhmgageiiebapmimgnmphge?utm_source=item-share-cb', '_blank');
+        } else if(param == 'Adclear'){
+            showAlert();
+        }
+    };
+ function showAlert() {
+            document.getElementById('custom-alert').classList.add('show');
+        }
+        function closeAlert() {
+            document.getElementById('custom-alert').classList.remove('show');
+        }
+        document.getElementById('custom-alert').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAlert();
+            }
+        });
