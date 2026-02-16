@@ -163,6 +163,7 @@ body[data-theme='dark'] .slide-content {
     font-weight: 700;
     white-space: nowrap;
     transition: all 0.2s ease;
+    cursor: default;
 }
 
 body[data-theme='dark'] .skill-badge {
