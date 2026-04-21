@@ -487,23 +487,24 @@
                 <div class="only_text">
                   <p>기술지원<small>(2025. 03. 04 ~ )</small></p>
                   <div class="supportList">
-                    <span><strong>KBank</strong><small> 스케줄러를 통한 EAI 연계 데이터 수집 및 업데이트, 스크립트 업데이트</small></span>
+                    <span><strong>KBank</strong><small> 스케줄러를 통한 EAI 연계 데이터 수집 및 업데이트, 스크립트 업데이트, VIEW 수정, 정보파기관련 컬럼 추가</small></span>
                     <span><strong>웰컴저축은행</strong><small> OS 업데이트 대응, META 버전 확인 및 재기동</small></span>
-                    <span><strong>IBK캐피탈</strong><small> 테이블 스페이스 용량 추적 및 처리, JSP 로드 수정</small></span>
-                    <span><strong>IM캐피탈</strong><small> 이상 데이터 정리, 소스 디컴파일 업데이트, 메모리 오버(GC오류)시점 확인을 통해 연계 솔루션 컨텍</small></span>
-                    <span><strong>KB캐피탈</strong><small> 암호화 관련 데이터 적용, 미들웨어 버전 업데이트, 보안취약점 조치(디컴파일을 통한 소스 복구 및 처리)</small></span>
+                    <span><strong>IBK캐피탈</strong><small> 테이블 스페이스 용량 추적 및 처리, JSP 로드 수정, 관리자 계정 복구 SQL 지원</small></span>
+                    <span><strong>IM캐피탈</strong><small> 이상 데이터 정리, 소스 디컴파일 업데이트, 메모리 오버(GC오류)시점 확인을 통해 연계 솔루션 컨텍, 중복데이터 탐지 오류 수정</small></span>
+                    <span><strong>KB캐피탈</strong><small> 암호화 관련 데이터 적용, 미들웨어 버전 업데이트, 로그인 취약점 조치(소스 소실로 인한 Mybatis의 xml 수정으로 대응, 로그인 SQL 로직에 SQL Function 생성하여 로그인 실패시 잠금 및 패스워드 변경 일자 기능 추가)</small></span>
                     <span><strong>JB우리캐피탈</strong><small> 로그 분석 기반 이상 데이터 추적 및 안내</small></span>
-                    <span><strong>KDB산은캐피탈</strong><small> DDL스크립트 출력 이상 수정, GAP분석 수정, 연계데이터 조회 수정, Ldap SSO 적용</small></span>
+                    <span><strong>KDB산은캐피탈</strong><small> DDL스크립트 출력 이상 수정 파티션 테이블 인덱스 LOCAL 자동화, GAP분석 수정, 연계데이터 조회 수정, Ldap SSO 적용, 데이터 클렌징 지원</small></span>
                     <span><strong>한국주택공사</strong><small> 서버 상태 점검, 컬럼 값 정정, 프로파일 시스템 정리</small></span>
-                    <span><strong>애큐온캐피탈</strong><small> 테이블 스페이스 용량 추적 및 처리</small></span>
-                    <span><strong>법무부</strong><small> XSS 조치, 보안 취약점 대응, 중복 로그인 방지, 쿼리 검증 강화</small></span>
+                    <span><strong>애큐온캐피탈</strong><small> 테이블 스페이스 용량 추적 및 처리, 보안 취약점 대응(Server설정 및 에러페이지 리다이렉트)</small></span>
+                    <span><strong>법무부</strong><small> XSS 및 보안취약점 대응(Escape 처리, 게시글 조회 생성 권한 문제), 중복 로그인 방지, 쿼리 검증 강화</small></span>
                     <span><strong>부산시청</strong><small> 시스템 오버플로우 대응, 스케줄러 수정</small></span>
+                    <span><strong>소방청</strong><small>JBOSS 세션 타임아웃 오류 수정</small></span>
                     <span><strong>정보자원관리시스템</strong><small> SQL 진단 스크립트 타임아웃 문제 수정(자바 라이브러리 확인을 통한 타임아웃 기간 확인)</small></span>
                     <span><strong>건설근로자공제회</strong><small> 로그인 환경 개선, DDL 스크립트 최적화, Tibero 환경 구성, Gap분석 스크립트 수정, 스케줄러 수정</small></span>
                     <span><strong>한국신용정보보증원</strong><small> 데이터 이전 지원, ERWIN 연계 작업, Ldap -> Ldaps 수정, 파티션 테이블 DDL Script 수정</small></span>
                     <span><strong>교통안전공단</strong><small> 파티션 설정 오류 수정, META 서버 이전 지원</small></span>
-                    <span><strong>한국교육학술정보원</strong><small> DB2오류 수정, 프로파일 오류 수정</small></span>
-                    <span><strong>롯데칠성</strong><small>IAM 계정 연계 시스템 점검, 인터페이스 정의, 데이터 덤프</small></span>
+                    <span><strong>한국교육학술정보원</strong><small> DB2오류 수정, 프로파일 스케줄러 수집 오류 수정</small></span>
+                    <span><strong>롯데칠성</strong><small>IAM 계정 연계 시스템 점검, 인터페이스 정의, 데이터 덤프, VIEW 수정</small></span>
                   </div>
                   <div class="badge-container">
                     <span>[지원팀으로 부서이동 후 선임 업무 인수인계]</span>
@@ -620,7 +621,7 @@
             - 이기종 DB 간 데이터 컨버전 및 데이터 마이그레이션(Merge Into 등 활용)
             - Window 함수 및 복합 조인을 활용한 복잡한 데이터 조회 로직 구현
             - DB Catalog 분석 및 EAI 연계를 위한 시노님/그랜트 권한 관리
-            - Redis를 활용한 캐싱 및 성능 개선 이해
+            - Redis를 활용한 캐싱 및 성능 개선
 
             Infra
             - Linux 환경에서의 서비스 배포 및 Shell Script 작성
