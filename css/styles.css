@@ -11598,6 +11598,13 @@ section.resume-section .resume-section-content {
   position: relative;
   cursor: pointer;
 }
+.supportList span {
+  display: flow-root;
+  margin-bottom: 5px;
+}
+.supportList small {
+  width: 80%;
+}
 /* Filter Buttons */
 .filter-container {
   display: flex;
