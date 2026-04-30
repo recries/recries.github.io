@@ -364,3 +364,42 @@ body[data-theme='dark'] .custom-alert-btn {
     background-color: var(--theme-primary-color);
     color: #1a1a1a !important;
 }
+
+/* Modal and Table Styling */
+.modal-content {
+    background-color: var(--theme-bg);
+    color: var(--theme-text-color);
+    border: 1px solid var(--theme-hr-color);
+}
+
+.modal-header, .modal-footer {
+    border-color: var(--theme-hr-color);
+}
+
+.btn-close {
+    filter: none;
+}
+
+body[data-theme='dark'] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+#excel-data-container table {
+    color: var(--theme-text-color) !important;
+}
+
+#excel-data-container table th, 
+#excel-data-container table td {
+    border-color: var(--theme-hr-color) !important;
+    padding: 8px !important;
+}
+
+body[data-theme='dark'] #excel-data-container table thead th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme='dark'] .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--theme-text-color);
+}
+

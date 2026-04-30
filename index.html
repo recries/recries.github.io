@@ -32,6 +32,8 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/theme.css" rel="stylesheet" />
+    <!-- SheetJS -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -470,7 +472,7 @@
 
               <div class="project">
                 <p>기술지원</p>
-                <a class="" href="https://wise.co.kr" target="_blank">[META 기술지원]</a>
+                <a class="" href="javascript:void(0);" id="openWorkList">[META 기술지원] <- 클릭시 상세보기</a>
               </div>
 
               <div class="career_area overflow-fix">
@@ -726,6 +728,26 @@
             <p>현재 이 프로젝트는 종료되어 더 이상 이용하실 수 없습니다.<br>관심을 가져주셔서 감사합니다.</p>
             <button class="custom-alert-btn" onclick="closeAlert()">확인</button>
         </div>
+    </div>
+
+    <!-- Work List Modal -->
+    <div class="modal fade" id="workListModal" tabindex="-1" aria-labelledby="workListModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="workListModalLabel">기술지원 상세 내역</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="excel-data-container" class="table-responsive">
+              <p class="text-center">데이터를 불러오는 중입니다...</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
