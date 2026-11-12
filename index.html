@@ -32,8 +32,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/theme.css" rel="stylesheet" />
-    <!-- SheetJS -->
-    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -195,212 +193,161 @@
             <button class="btn btn-filter" data-filter="JavaScript">JavaScript</button>
             <button class="btn btn-filter" data-filter="DB">DB</button>
           </div>-->
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <div class="career_header">
-                <h3 class="mb-0">한국직무능력평가연구소(연구원)</h3>
-                <span class="text-primary">2022. 10.24 ~ 2024 .05.31</span>
+          <article class="career-company career-company-first">
+            <header class="career-company-header">
+              <div>
+                <p class="career-eyebrow">FIRST ROLE · FULL STACK</p>
+                <h3>한국직무능력평가연구소 <span>(연구원)</span></h3>
               </div>
-              <div class="subheading mb-2">풀스택</div>
-              <div class="badge-container mb-3">
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">JavaScript</span>
-                <span class="skill-badge">Spring</span>
-                <span class="skill-badge">Jquery</span>
-                <span class="skill-badge">Mybatis</span>
-                <span class="skill-badge">MariaDB</span>
-                <span class="skill-badge">Tomcat</span>
-                <span class="skill-badge">Gitlab</span>
-                <span class="skill-badge">Jenkins</span>
-                <span class="skill-badge">Nginx</span>
-                <span class="skill-badge">Elasticsearch</span>
-                <span class="skill-badge">Docker</span>
-              </div>
-              <div class="project">
-                <p>메인 개발 프로젝트</p>
-                <a class="" href="https://kvai.co.kr/hrSolution/selectIN" target="_blank">[채용평가관리 시스템]</a>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>지원서 자율 커스텀 시스템</p>
-                  <span>draggable js 라이브러리 적용</span>
-                  <span>개발자의 개입 없이 원하는 대로 적용 및 사용 가능한 지원서 설정</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/resumeTemplate.png" alt="example_img"></div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>지원분야 시스템 고도화</p>
-                  <span>아코디언 구조 Drag&Drop을 위한 jqueryUI의 sortable 사용</span>
-                  <span>지원분야 추가 및 이동에 중복값 감지 적용 및 초기화 함수 적용</span>
-                  <span>DB 최적화를 통해 지원분야 조회 및 업데이트</span>
-                  <span>엑셀 업로드 및 이전 데이터 불러오기등 유용성 기능 추가</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">Jquery UI</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/fieldSetImage.png" alt="example_img"></div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>메인 비쥬얼 애널리틱스 시스템</p>
-                  <span>chartJs을 통한 통계 그래픽 UI작성</span>     
-                  <span>Ajax를 통한 실시간 통계 작성 및 DB 조회 속도 최적화</span>
-                  <span>실행계획 DB 조회를 통해 다량의 정보 조회 최적화</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">Jquery UI</span>
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/main.png" alt="example_img"></div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>비쥬얼 애널리틱스 시스템</p>
-                  <span>chartJs을 통한 통계 그래픽 UI작성</span>     
-                  <span>Ajax를 통한 실시간 통계 작성 및 DB 조회 속도 최적화</span>
-                  <span>실행계획 DB 조회를 통해 다량의 정보 조회 최적화</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">Jquery UI</span>
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/analytics.png" alt="example_img"></div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>면접제안 시스템</p>
-                  <span>서비스 단에서 사용자 검증을 위한 개별 코드 생성</span>
-                  <span>자체 SMTP를 통한 자동 이메일링 시스템 구축</span> 
-                  <span>fullcalendar 라이브러리 도입 및 커스텀</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">Jquery UI</span>
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/interview.png" alt="example_img"></div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>블라인드 시스템</p>
-                  <span>블라인드 기능을 위한 DB설계</span>
-                  <span>모든 시스템의 커스텀을 할 수 있게 DB수정</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">Jquery UI</span>
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/blindSystem.png" alt="example_img"></div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area">
-                  <p>스크리닝 시스템</p>
-                  <span>지원자 자동 스크리닝을 위한 기능</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Jquery</span>
-                    <span class="skill-badge">Jquery UI</span>
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="expand_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/screeningImage/personal.png" alt="example_img"></div>
-              </div>
-
-              <div class="swiper modal">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="/assets/screeningImage/personal.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/education.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/career.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/compe.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/etc.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/save.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/result.png" alt="example_img"></div>
-                  <div class="swiper-slide"><img src="/assets/screeningImage/alone.png" alt="example_img"></div>
-                </div>
-              </div>
-
-              <div class="career_area">
-                <div class="text_area" style="width: 100%;">
-                  <p>메신저 기능 카카오톡 이관</p>
-                  <span>기존 SMS 기능(타사 문자 api) 카카오 알림톡으로 변경</span>
-                  <span>템플릿 ENUM 클래스로 관리 및 수정</span>
-                  <span>관련 로그 수집 DB추가 및 발송 히스토리 구현</span>
-                  <div class="badge-container">
-                    <span class="skill-badge">MariaDB</span>
-                  </div>
-                </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/kakao.png" alt="example_img"></div>
-              </div>
-
-            <div class="career_area" style="margin-bottom: 200px;">
-              <div class="text_area" style="width: 100%;">
-                <p>전체 페이지 비쥬얼 업데이트 및 리팩토링</p>
-                <span>기타 솔루션 시스템 업그레이드</span>
-                <span>쿼리 개선</span>
-                <span>- 불필요한 조회 내역 정리 및 테이블 정리, 속도 개선을 위한 쿼리 수정</span>
-                <span>웹 에디터 ckEditor4 -> synapEditor 변경 및 적용</span>
-                <span>- 와일드 카드 도메인 라이센스 이슈로 인해 메인 도메인을 적용 및 우회 하여 Iframe구조의 콜백함수를 통한 에디터 적용</span>
-                <span>dateRangePicker 라이브러리 도입 및 커스텀</span>
-              </div>
-              <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/working.png" alt="example_img"></div>
+              <p class="career-period">2022. 10. 24 – 2024. 05. 31</p>
+            </header>
+            <p class="career-company-intro">채용평가관리 솔루션의 주요 기능을 개발하고 운영하며, 기획팀 및 실제 사용자와 협업해 요구사항을 제품 개선으로 연결했습니다.</p>
+            <div class="career-tech-stack" aria-label="사용 기술">
+              <span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">Spring</span><span class="skill-badge">jQuery</span><span class="skill-badge">MyBatis</span><span class="skill-badge">MariaDB</span><span class="skill-badge">Tomcat</span><span class="skill-badge">GitLab</span><span class="skill-badge">Jenkins</span><span class="skill-badge">Nginx</span><span class="skill-badge">Elasticsearch</span><span class="skill-badge">Docker</span>
+            </div>
+            <div class="career-primary-project">
+              <span>주요 프로젝트</span>
+              <a href="https://kvai.co.kr/hrSolution/selectIN" target="_blank" rel="noopener noreferrer">채용평가관리 시스템 <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </div>
 
-            <div class="career_area" style="margin-bottom: 200px;">
-                <div class="text_area" style="width: 100%;">
-                  <p>커밋 기록</p>
-                  <span>작업량 증빙</span>
-
+            <div class="career-project-grid">
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">지원서 구성</p>
+                  <h4>지원서 자율 커스텀 시스템</h4>
+                  <ul><li>Draggable JS 라이브러리를 적용해 지원서 항목을 직접 배치할 수 있도록 구현</li><li>개발자 개입 없이 운영자가 원하는 구성으로 지원서를 설정하고 사용할 수 있도록 개발</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">MariaDB</span></div>
                 </div>
-                <div class="mini_img"><span>이미지를 클릭하면 확대할 수 있습니다.</span><img src="/assets/img/commit_do.png" alt="example_img"></div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/resumeTemplate.png" data-preview-alt="지원서 항목을 직접 구성하고 배치하는 지원서 템플릿 화면" aria-label="지원서 템플릿 화면 크게 보기"><img src="/assets/img/resumeTemplate.png" alt="지원서 항목을 직접 구성하고 배치하는 지원서 템플릿 화면"></button><figcaption>지원서 항목을 직접 구성하는 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">채용 공고 관리</p>
+                  <h4>지원분야 시스템 고도화</h4>
+                  <ul><li>아코디언 구조에서 드래그 앤 드롭을 지원하도록 jQuery UI Sortable 적용</li><li>지원분야 추가·이동 시 중복값 감지와 초기화 함수 적용</li><li>DB 조회 및 업데이트 최적화</li><li>엑셀 업로드와 이전 데이터 불러오기 기능 추가</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">jQuery UI</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/fieldSetImage.png" data-preview-alt="지원분야 항목을 아코디언 목록에서 관리하는 화면" aria-label="지원분야 관리 화면 크게 보기"><img src="/assets/img/fieldSetImage.png" alt="지원분야 항목을 아코디언 목록에서 관리하는 화면"></button><figcaption>지원분야 관리 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">통계 및 대시보드</p>
+                  <h4>메인 비주얼 애널리틱스 시스템</h4>
+                  <ul><li>Chart.js 기반 통계 그래픽 UI 작성</li><li>Ajax로 통계 데이터를 실시간 조회하고 화면에 반영</li><li>DB 실행 계획을 확인해 다량의 정보 조회 쿼리 최적화</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">jQuery UI</span><span class="skill-badge">MariaDB</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/main.png" data-preview-alt="채용 현황을 요약해 보여주는 메인 통계 대시보드" aria-label="메인 통계 대시보드 크게 보기"><img src="/assets/img/main.png" alt="채용 현황을 요약해 보여주는 메인 통계 대시보드"></button><figcaption>메인 통계 대시보드 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">통계 및 대시보드</p>
+                  <h4>비주얼 애널리틱스 시스템</h4>
+                  <ul><li>Chart.js 기반 통계 그래픽 UI 작성</li><li>Ajax 실시간 통계 조회 및 DB 조회 속도 최적화</li><li>실행 계획을 분석해 대량 데이터 조회 쿼리 개선</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">jQuery UI</span><span class="skill-badge">MariaDB</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/analytics.png" data-preview-alt="채용 데이터를 시각화해 분석하는 애널리틱스 화면" aria-label="비주얼 애널리틱스 화면 크게 보기"><img src="/assets/img/analytics.png" alt="채용 데이터를 시각화해 분석하는 애널리틱스 화면"></button><figcaption>애널리틱스 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">면접 일정 및 커뮤니케이션</p>
+                  <h4>면접제안 시스템</h4>
+                  <ul><li>서비스 단에서 사용자 검증을 위한 개별 코드 생성</li><li>자체 SMTP를 이용한 자동 이메일 발송 시스템 구축</li><li>FullCalendar 라이브러리 도입 및 서비스에 맞게 커스텀</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">jQuery UI</span><span class="skill-badge">MariaDB</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/interview.png" data-preview-alt="면접 일정을 관리하고 면접을 제안하는 화면" aria-label="면접제안 시스템 화면 크게 보기"><img src="/assets/img/interview.png" alt="면접 일정을 관리하고 면접을 제안하는 화면"></button><figcaption>면접 일정 관리 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">공정한 채용 지원</p>
+                  <h4>블라인드 시스템</h4>
+                  <ul><li>블라인드 처리 기능을 지원하기 위한 DB 구조 설계</li><li>각 고객사와 시스템별 요구사항을 설정할 수 있도록 관련 DB 구조 개선</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">jQuery UI</span><span class="skill-badge">MariaDB</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/blindSystem.png" data-preview-alt="채용 과정의 블라인드 설정을 관리하는 화면" aria-label="블라인드 시스템 화면 크게 보기"><img src="/assets/img/blindSystem.png" alt="채용 과정의 블라인드 설정을 관리하는 화면"></button><figcaption>블라인드 설정 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card career-project-card-wide">
+                <div class="career-project-copy">
+                  <p class="career-project-label">지원자 검토 자동화</p>
+                  <h4>스크리닝 시스템</h4>
+                  <ul><li>지원자를 자동으로 검토하고 분류하는 스크리닝 기능 개발</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">Java</span><span class="skill-badge">JavaScript</span><span class="skill-badge">jQuery</span><span class="skill-badge">jQuery UI</span><span class="skill-badge">MariaDB</span></div>
+                </div>
+                <figure class="career-project-visual screening-preview"><button class="screening-gallery-trigger" type="button" aria-label="스크리닝 시스템 화면 갤러리 열기"><img src="/assets/screeningImage/personal.png" alt="스크리닝 시스템의 지원자 개인정보 확인 화면"><span>화면 갤러리 보기</span></button><figcaption>지원자 개인정보, 학력, 경력, 자격 및 심사 결과 화면</figcaption></figure>
+              </article>
+
+              <article class="career-project-card">
+                <div class="career-project-copy">
+                  <p class="career-project-label">알림 및 발송 이력</p>
+                  <h4>메신저 기능 카카오톡 이관</h4>
+                  <ul><li>기존 타사 SMS 발송 기능을 카카오 알림톡으로 전환</li><li>메시지 템플릿을 ENUM 클래스로 관리하고 수정</li><li>발송 로그 저장 구조를 추가하고 발송 이력 조회 기능 구현</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">MariaDB</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/kakao.png" data-preview-alt="카카오 알림톡 메시지 템플릿과 발송 이력 화면" aria-label="카카오 알림톡 이관 화면 크게 보기"><img src="/assets/img/kakao.png" alt="카카오 알림톡 메시지 템플릿과 발송 이력 화면"></button><figcaption>알림톡 발송 이력 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card career-project-card-wide">
+                <div class="career-project-copy">
+                  <p class="career-project-label">공통 UI 및 유지보수</p>
+                  <h4>전체 페이지 비주얼 업데이트 및 리팩토링</h4>
+                  <ul><li>기타 솔루션 시스템 업그레이드</li><li>불필요한 조회와 테이블을 정리하고 쿼리를 개선해 속도 향상</li><li>CKEditor 4를 Synap Editor로 교체하고 적용</li><li>와일드카드 도메인 라이선스 이슈를 해결하기 위해 메인 도메인과 iframe 콜백 구조로 에디터 연동</li><li>DateRangePicker 라이브러리 도입 및 커스텀</li></ul>
+                  <div class="career-tech-stack"><span class="skill-badge">JavaScript</span><span class="skill-badge">SQL</span><span class="skill-badge">Synap Editor</span><span class="skill-badge">DateRangePicker</span></div>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/working.png" data-preview-alt="전체 페이지 UI 개선과 리팩토링 작업 화면" aria-label="UI 개선 작업 화면 크게 보기"><img src="/assets/img/working.png" alt="전체 페이지 UI 개선과 리팩토링 작업 화면"></button><figcaption>UI 개선 및 리팩토링 작업 화면 · 클릭해 확대</figcaption></figure>
+              </article>
+
+              <article class="career-project-card career-project-card-wide">
+                <div class="career-project-copy">
+                  <p class="career-project-label">협업 및 개발 기록</p>
+                  <h4>지속적인 개발과 코드 리뷰</h4>
+                  <ul><li>Git 커밋 기록을 작업량 증빙으로 정리하고 코드 리뷰를 통해 개선</li><li>기획팀 및 실제 업무 사용자의 피드백을 반영해 기능을 보완하고 신규 기능을 개발</li></ul>
+                </div>
+                <figure class="career-project-visual"><button class="image-preview-trigger" type="button" data-preview-src="/assets/img/commit_do.png" data-preview-alt="프로젝트 개발 커밋 이력 화면" aria-label="개발 커밋 기록 크게 보기"><img src="/assets/img/commit_do.png" alt="프로젝트 개발 커밋 이력 화면"></button><figcaption>프로젝트 커밋 기록 · 클릭해 확대</figcaption></figure>
+              </article>
             </div>
 
+            <dialog class="swiper screening-gallery" id="screening-gallery" aria-label="스크리닝 시스템 화면 갤러리">
+              <button class="screening-gallery-close" type="button" aria-label="갤러리 닫기">&times;</button>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/assets/screeningImage/personal.png" alt="스크리닝 시스템의 지원자 개인정보 확인 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/education.png" alt="스크리닝 시스템의 학력 정보 확인 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/career.png" alt="스크리닝 시스템의 경력 정보 확인 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/compe.png" alt="스크리닝 시스템의 역량 정보 확인 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/etc.png" alt="스크리닝 시스템의 기타 지원자 정보 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/save.png" alt="스크리닝 설정 저장 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/result.png" alt="스크리닝 결과 화면"></div>
+                <div class="swiper-slide"><img src="/assets/screeningImage/alone.png" alt="개별 지원자 스크리닝 화면"></div>
+              </div>
+              <button class="swiper-button-prev" type="button" aria-label="이전 화면"></button>
+              <button class="swiper-button-next" type="button" aria-label="다음 화면"></button>
+            </dialog>
 
-            <div class="comment_area">
-              <span>첫 번째 회사로 입사하게 되었던 솔루션 회사</span><br>
-              저는 많은 경험과 시행착오를 통해 성장할 수 있었습니다.
-              주니어 개발자로서 능력 있는 팀장님과 사수님의 지도 아래 많은 도전을 경험하며 성장할 수 있었고, 특히 채용 시스템을 전담하고
-              기획팀과 실 업무에 사용하는 팀원분들과 협력하여 고객의 요구에 부응하는 시스템을 개선하고 신규 개발하여 신뢰도 높은 솔루션으로 만들었습니다.
-              제가 개발한 시스템을 직접 사용하며 그 성과를 목격하는 것은 큰 보람이었고, 이러한 경험을 통해 끊임없는 성장과 책임감을 느낄 수 있었습니다.
-              <br><br>
-              <span>기술 및 업무 습득</span><br>
-              회사 사내 교육시스템(영상 강의)로 Spring, docker, linux 교육
-              코드 리뷰를 통한 언어 공부 및 피드백과 경험, 실무 개발을 통한 전반적인 풀스택 역량 강화
-              - Java, Git, SMTP, XSS보안대책, 가비아 방화벽 도입, Apache POI, Linux, Ubuntu
-              회사 내 인프라 구성도에 대한 이해 및 습득
-              - Gitlab의 웹 훅으로 자동 Jenkins 빌드 및 파이프라인 실행, Nginx을 통한 로드밸런서를 통한 부하 감소 무중단 배포 환경 구축,
-              - Elasticsearch을 통한 로그 수집, 이를 통괄 관리하는 Docker시스템 이해
+            <div class="career-learning-grid">
+              <section class="career-learning-card">
+                <h4>업무 경험</h4>
+                <p>첫 회사에서 다양한 경험과 시행착오를 통해 성장했습니다. 능력 있는 팀장님과 사수님의 지도 아래 도전적인 업무를 맡았고, 채용 시스템을 전담해 기획팀과 실제 사용자가 원하는 기능을 개선하고 신규 개발했습니다. 개발한 기능이 현업에서 쓰이며 신뢰도 높은 솔루션으로 자리 잡는 과정을 보면서 큰 보람과 책임감을 배웠습니다.</p>
+              </section>
+              <section class="career-learning-card">
+                <h4>기술 및 업무 습득</h4>
+                <ul><li>사내 영상 교육으로 Spring, Docker, Linux 학습</li><li>코드 리뷰와 피드백을 통해 언어와 구현 방법을 꾸준히 학습하고 풀스택 역량 강화</li><li>Java, Git, SMTP, XSS 보안 대책, 가비아 방화벽 도입, Apache POI, Linux, Ubuntu 실무 경험</li></ul>
+              </section>
+              <section class="career-learning-card career-learning-card-wide">
+                <h4>배포 및 운영 인프라 경험</h4>
+                <ul><li>GitLab 웹훅과 Jenkins를 연동해 자동 빌드 및 파이프라인 실행</li><li>Nginx 로드 밸런싱으로 부하를 분산하고 무중단 배포 환경 구축</li><li>Elasticsearch로 로그를 수집하고 Docker 시스템에서 통합 관리</li></ul>
+              </section>
             </div>
-            </div>  
-          </div>
+          </article>
+
+          <dialog class="image-preview-dialog" id="image-preview-dialog" aria-label="프로젝트 이미지 미리보기">
+            <form method="dialog"><button class="image-preview-close" aria-label="미리보기 닫기">&times;</button></form>
+            <img id="image-preview-large" alt="">
+            <p id="image-preview-caption"></p>
+          </dialog>
 
           <hr class="my-5" />
 
@@ -470,98 +417,94 @@
                 </div>
               </div>
 
-              <div class="project">
-                <p>기술지원</p>
-                <a class="" href="javascript:void(0);" id="openWorkList">[META 기술지원] <- 클릭시 상세보기</a>
-              </div>
-
               <div class="career_area overflow-fix">
-                <div class="only_text">
-                  <p>기술지원<small>(2025. 03. 04 ~ )</small></p>
-                  <div class="supportList">
-                    <span>
-                      <strong>KBank</strong>
-                      <small> 스케줄러를 통한 EAI 연계 데이터 수집 및 업데이트, 스크립트 업데이트, VIEW 수정, 정보파기관련 컬럼 추가</small>
-                    </span>
-                    <span>
-                      <strong>웰컴저축은행</strong>
-                      <small> OS 업데이트 대응, META 버전 확인 및 재기동</small>
-                    </span>
-                    <span>
-                      <strong>IBK캐피탈</strong>
-                      <small> 테이블 스페이스 용량 추적 및 처리, JSP 로드 수정, 관리자 계정 복구 SQL 지원</small>
-                    </span>
-                    <span>
-                      <strong>IM캐피탈</strong>
-                      <small> 이상 데이터 정리, 소스 디컴파일 업데이트, 메모리 오버(GC오류)시점 확인을 통해 연계 솔루션 컨텍, 중복데이터 탐지 오류 수정</small>
-                    </span>
-                    <span>
-                      <strong>KB캐피탈</strong>
-                      <small> 암호화 관련 데이터 적용, 미들웨어 버전 업데이트, 로그인 취약점 조치(소스 소실로 인한 Mybatis의 xml 수정으로 대응, 로그인 SQL 로직에 SQL Function 생성하여 로그인 실패시 잠금 및 패스워드 변경 일자 기능 추가)</small>
-                    </span>
-                    <span>
-                      <strong>JB우리캐피탈</strong>
-                      <small> 로그 분석 기반 이상 데이터 추적 및 안내</small>
-                    </span>
-                    <span>
-                      <strong>KDB산은캐피탈</strong>
-                      <small> DDL스크립트 출력 이상 수정, 파티션 테이블 인덱스 LOCAL 자동화, GAP분석 수정, 연계데이터 조회 수정, Ldap SSO 적용, 데이터 클렌징 지원</small>
-                    </span>
-                    <span>
-                      <strong>한국주택공사</strong>
-                      <small> 서버 상태 점검, 컬럼 값 정정, 프로파일 시스템 정리</small>
-                    </span>
-                    <span>
-                      <strong>애큐온캐피탈</strong>
-                      <small> 테이블 스페이스 용량 추적 및 처리, 보안 취약점 대응(Server설정 및 에러페이지 리다이렉트)</small>
-                    </span>
-                    <span>
-                      <strong>법무부(형사사법)</strong>
-                      <small> XSS 및 보안취약점 대응(Escape 처리, 게시글 조회 생성 권한 문제), 중복 로그인 방지, 쿼리 검증 강화, 로그인 로직 개선</small>
-                    </span>
-                    <span>
-                      <strong>법무부(범죄예방)</strong>
-                      <small> 코드데이터 운영 조회를 위한 VIEW 로직 수정</small>
-                    </span>
-                    <span>
-                      <strong>부산시청</strong>
-                      <small> 시스템 오버플로우 대응, 스케줄러 수정, 스케줄러 로그 탐색 후 메모리 아웃 원인 파악 및 해결</small>
-                    </span>
-                    <span>
-                      <strong>소방청</strong>
-                      <small>JBOSS 세션 타임아웃 오류 수정</small>
-                    </span>
-                    <span>
-                      <strong>병무청</strong>
-                      <small>중복데이터 탐지, 프로파일 로직 개선, EAI연계 업무규칙 SQL 오류 결과 로직 변경</small>
-                    </span>
-                    <span>
-                      <strong>정보자원관리시스템</strong>
-                      <small> SQL 진단 스크립트 타임아웃 문제 수정(자바 라이브러리 확인을 통한 타임아웃 기간 확인)</small>
-                    </span>
-                    <span>
-                      <strong>건설근로자공제회</strong>
-                      <small> 로그인 환경 개선, DDL 스크립트 최적화, Tibero 환경 구성, Gap분석 스크립트 수정, 스케줄러 수정</small>
-                    </span>
-                    <span>
-                      <strong>한국신용정보보증원</strong>
-                      <small> 데이터 이전 지원, ERWIN 연계 작업, Ldap -> Ldaps 수정, 파티션 테이블 DDL Script 수정</small>
-                    </span>
-                    <span>
-                      <strong>교통안전공단</strong>
-                      <small> 파티션 테이블 설정 오류 수정, 파티션 테이블 DDL 스크립트 출력을 위한 인덱스 생성 스크립트 개선(LOCAL) META 서버 이전 지원</small>
-                    </span>
-                    <span>
-                      <strong>한국교육학술정보원</strong>
-                      <small> DB2 컨버젼 오류 수정, 프로파일 스케줄러 수집 오류 수정</small>
-                    </span>
-                    <span>
-                      <strong>롯데칠성</strong>
-                      <small>IAM 계정 연계 시스템 점검, 인터페이스 정의, 데이터 덤프, 표준용어 커스터마이징을 위한 VIEW 수정</small>
-                    </span>
-                  </div>
-                  <div class="badge-container">
-                    <span>[지원팀으로 부서이동 후 선임 업무 인수인계]</span>
+                <div class="only_text support-only-text">
+                  <p>고객사별 주요 업무<small>(2025. 03 ~ 2026. 11. 12 기준)</small></p>
+                  <div class="support-company-list">
+                    <article class="support-company">
+                      <h4>건설근로자공제회</h4>
+                      <ul><li>메타 시스템 이관·운영 및 사용자 교육</li><li>GAP 분석, DDL 오류와 서버 환경 이슈 분석</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>법무부</h4>
+                      <ul><li>ERWIN 연계와 메타데이터 검증 오류 개선</li><li>스케줄러·데이터 오류 분석 및 업무 기능 보완</li><li>인증·권한과 보안 점검 요청 대응</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>대한소방공제회</h4>
+                      <ul><li>메타 시스템 인수인계 및 운영 환경 구성 지원</li><li>사용자 접속 환경 및 정기 점검 지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>DGB캐피탈</h4>
+                      <ul><li>메타 시스템 정기 점검 및 운영 지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>롯데이노베이트</h4>
+                      <ul><li>Vertica 등 DB 환경 변경 및 업그레이드 확인</li><li>스케줄러, SSO·IAM·EAI 연계와 로그인 기능 개선</li><li>DBMS별 데이터 타입 검증 및 오류 수정</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>부산시청</h4>
+                      <ul><li>메타·DQ 정기 점검과 사용자 교육</li><li>서버·DB 이관, 서비스 재기동 및 스케줄러 운영 개선</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>병무청</h4>
+                      <ul><li>메타·DQ 정기 점검 및 프로파일 기능 확인</li><li>개발·실행 환경 설정 차이와 연계 업무 오류 개선</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>소방청</h4>
+                      <ul><li>메타·DQ 정기 점검 및 운영 환경 변경 대응</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>애큐온캐피탈</h4>
+                      <ul><li>메타 시스템 정기 점검 및 PowerDesigner 연계 확인</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>웰컴저축은행</h4>
+                      <ul><li>메타 시스템 정기 점검 및 운영 장애 원인 분석</li><li>DDL 생성 스크립트와 등록 기능 오류 수정</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>케이뱅크</h4>
+                      <ul><li>감사 대응 SQL 및 데이터 조회 기능 개선</li><li>DBMS 타입, DDL 스크립트와 메타데이터 기능 지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>KDB 산은캐피탈</h4>
+                      <ul><li>WISE Meta·DQ 커스터마이징 및 데이터 품질 기능 개선</li><li>DDL·GAP 분석, 코드 데이터와 EAI 연계 오류 수정</li><li>쿼리·데이터 정합성 검토와 운영 지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>한국교통안전공단</h4>
+                      <ul><li>WISE Meta·DQ 정기 점검</li><li>DQ 업무 규칙 오류 분석 및 수정</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>한국교육학술정보원</h4>
+                      <ul><li>WISE Meta·DQ 커스터마이징 및 데이터 품질 기능 개선</li><li>DB2 호환성 오류 수정과 운영 배포 지원</li><li>Tomcat 업그레이드 및 ESB 연계 확인</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>한국신용정보원</h4>
+                      <ul><li>메타 시스템 설치·이관 및 사용자 교육</li><li>LDAP·ERWIN 연계와 표준·검증 기능 개선</li><li>DDL, 데이터 정리, DBMS 설정 및 운영 이슈 대응</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>한국주택금융공사</h4>
+                      <ul><li>WISE DQ 정기 점검</li><li>DB 이관 영향도 확인 및 운영 지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>한국캐피탈</h4>
+                      <ul><li>메타 시스템 정기 점검 및 서버 이전 지원</li><li>DB 정리 요청 대응</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>IBK캐피탈</h4>
+                      <ul><li>메타 시스템 구축·업그레이드 및 신규 환경 적용 지원</li><li>정기 점검과 사업부 기술지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>KB캐피탈</h4>
+                      <ul><li>Tomcat 업그레이드와 HTTPS 적용</li><li>DB 연결·스케줄러·데이터 변환 문제 분석 및 개선</li><li>신규 메타 환경 구축 지원</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>한국수자원공사</h4>
+                      <ul><li>메타 시스템 반기 정기 점검</li></ul>
+                    </article>
+                    <article class="support-company">
+                      <h4>행정안전부</h4>
+                      <ul><li>대량 데이터 품질 진단 과정의 DB 연결 지연 분석 및 설정 개선</li><li>진단 SQL의 동시 실행 영향 검토와 안정화 방향 제시</li></ul>
+                    </article>
                   </div>
                 </div>
               </div>
@@ -734,24 +677,5 @@
         </div>
     </div>
 
-    <!-- Work List Modal -->
-    <div class="modal fade" id="workListModal" tabindex="-1" aria-labelledby="workListModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="workListModalLabel">기술지원 상세 내역</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div id="excel-data-container" class="table-responsive">
-              <p class="text-center">데이터를 불러오는 중입니다...</p>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

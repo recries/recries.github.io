@@ -24,14 +24,49 @@ window.addEventListener('DOMContentLoaded', event => {
     const swiper = new Swiper('.swiper', {
         speed: 400,
         spaceBetween: 2,
-        centerSlides : true
+        centeredSlides: true,
+        keyboard: { enabled: true },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
-    $('.expand_img').on('click', function(){
-        $('.swiper').css('display','block');
-    })
-    $('.swiper').on('click', function (){
-        $(this).css('display', 'none');
-    })
+
+    const screeningGallery = document.getElementById('screening-gallery');
+    const screeningGalleryTrigger = document.querySelector('.screening-gallery-trigger');
+    const screeningGalleryClose = document.querySelector('.screening-gallery-close');
+    if (screeningGallery && screeningGalleryTrigger && screeningGalleryClose) {
+        screeningGalleryTrigger.addEventListener('click', () => {
+            screeningGallery.showModal();
+            swiper.update();
+            screeningGalleryClose.focus();
+        });
+        screeningGalleryClose.addEventListener('click', () => screeningGallery.close());
+        screeningGallery.addEventListener('click', event => {
+            if (event.target === screeningGallery) screeningGallery.close();
+        });
+        screeningGallery.addEventListener('close', () => screeningGalleryTrigger.focus());
+    }
+
+    const imagePreviewDialog = document.getElementById('image-preview-dialog');
+    const previewImage = document.getElementById('image-preview-large');
+    const previewCaption = document.getElementById('image-preview-caption');
+    if (imagePreviewDialog && previewImage && previewCaption) {
+        document.querySelectorAll('.image-preview-trigger').forEach(button => {
+            button.addEventListener('click', () => {
+                previewImage.src = button.dataset.previewSrc;
+                previewImage.alt = button.dataset.previewAlt;
+                previewCaption.textContent = button.dataset.previewAlt;
+                imagePreviewDialog.showModal();
+            });
+        });
+        imagePreviewDialog.addEventListener('click', event => {
+            if (event.target === imagePreviewDialog) imagePreviewDialog.close();
+        });
+        imagePreviewDialog.addEventListener('close', () => {
+            previewImage.removeAttribute('src');
+        });
+    }
 
     
     const themeToggler = document.getElementById('theme-toggler');
@@ -100,70 +135,6 @@ window.addEventListener('DOMContentLoaded', event => {
                 backToTopButton.classList.add('is-visible');
             } else {
                 backToTopButton.classList.remove('is-visible');
-            }
-        });
-    }
-
-    // Excel Reading Logic
-    const openWorkListBtn = document.getElementById('openWorkList');
-    const workListModal = new bootstrap.Modal(document.getElementById('workListModal'));
-    const excelContainer = document.getElementById('excel-data-container');
-    let isExcelLoaded = false;
-
-    if (openWorkListBtn) {
-        openWorkListBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            workListModal.show();
-
-            if (!isExcelLoaded) {
-                fetch('workList.xls')
-                    .then(response => response.arrayBuffer())
-                    .then(data => {
-                        const workbook = XLSX.read(data, { type: 'array' });
-                        const firstSheetName = workbook.SheetNames[0];
-                        const worksheet = workbook.Sheets[firstSheetName];
-                        
-                        // User requested columns
-                        const targetColumns = ["No.", "요청일자", "고객사명", "사업명", "제품유형", "요청사항", "처리자", "처리방법", "처리유형", "진행상태", "처리완료일", "처리내용"];
-                        
-                        // Convert to JSON
-                        const jsonData = XLSX.utils.sheet_to_json(worksheet);
-                        
-                        if (jsonData.length === 0) {
-                            excelContainer.innerHTML = '<p class="text-center">표시할 데이터가 없습니다.</p>';
-                            return;
-                        }
-
-                        // Build HTML Table manually to filter columns
-                        let htmlTable = '<table id="workListTable" class="table table-bordered table-hover table-sm" style="width:100%">';
-                        
-                        // Header
-                        htmlTable += '<thead class="table-light"><tr>';
-                        targetColumns.forEach(col => {
-                            htmlTable += `<th>${col}</th>`;
-                        });
-                        htmlTable += '</tr></thead>';
-                        
-                        // Body
-                        htmlTable += '<tbody>';
-                        jsonData.forEach(row => {
-                            htmlTable += '<tr>';
-                            targetColumns.forEach(col => {
-                                let cellValue = row[col] || '';
-                                // Handle date values if necessary (Excel dates can be numbers)
-                                htmlTable += `<td>${cellValue}</td>`;
-                            });
-                            htmlTable += '</tr>';
-                        });
-                        htmlTable += '</tbody></table>';
-                        
-                        excelContainer.innerHTML = htmlTable;
-                        isExcelLoaded = true;
-                    })
-                    .catch(error => {
-                        console.error('Error loading excel file:', error);
-                        excelContainer.innerHTML = '<p class="text-danger text-center">파일을 불러오는 중 오류가 발생했습니다.</p>';
-                    });
             }
         });
     }
